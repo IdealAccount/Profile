@@ -1,10 +1,10 @@
 <template>
-  <div class="builder-input-box">
-    <div class="builder-input-box__label" >
-      <div class="input-box-label">{{label}}</div>
-    </div>
+  <field-wrapper :label="label">
     <div class="select-custom"
+         :class="{open: showDropdown}"
          @click.stop="showDropdown = !showDropdown"
+         tabindex="-1"
+         @focusout="closeSelect"
     >
       <div class="select-custom__button">
         <div id="title" class="title">{{selected}}</div>
@@ -13,23 +13,26 @@
         </svg>
       </div>
       <transition name="show-dropdown">
-        <ul v-if="showDropdown">
+        <ul>
           <li v-for="(option, index) of options"
               :key="index"
-              @click.prevent="select(option, index)"
+              @click.prevent="select(index)"
           >
             {{option.title}}
           </li>
         </ul>
       </transition>
     </div>
-  </div>
+  </field-wrapper>
 </template>
 
 <script>
   export default {
     props: {
       label: String,
+      optionsData: {
+        type: Array,
+      }
     },
     data() {
       return {
@@ -56,25 +59,55 @@
             selected: false,
           },
         ],
-        selected: null,
+        defaultOptions: [
+          {
+            title: 'England',
+            selected: true,
+          },
+          {
+            title: 'Ukraine',
+            selected: false,
+          },
+          {
+            title: 'Poland',
+            selected: false,
+          },
+          {
+            title: 'United States',
+            selected: false,
+          },
+          {
+            title: 'Spain',
+            selected: false,
+          },
+        ],
+        selected: '',
       }
     },
     mounted() {
+      this.options = (Array.isArray(this.optionsData) && this.optionsData.length) || this.options
       this.selected = this.options ? this.options[0].title : this.selected
     },
     methods: {
-      select(option, id) {
-        if (this.option.selected) return;
+      select(id) {
         this.options.forEach((option, index) => {
-          if (id !== index) option.selected = false;
+          if (id === index && option.selected) return false;
+          else if (id !== index) option.selected = false;
+          else {
+            option.selected = true
+            this.selected = option.title
+          }
         })
-        option.selected = true;
-        this.selected = option.title
+      },
+      closeSelect() {
+        this.showDropdown = false;
       }
-    }
+    },
   }
 </script>
 
 <style scoped>
-
+  .select-custom:focus {
+    outline: none;
+  }
 </style>

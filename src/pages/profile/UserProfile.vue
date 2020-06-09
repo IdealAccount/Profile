@@ -5,7 +5,9 @@
         <div class="profile-box__header">
           <div class="profile-box__header-title">Мой Профиль</div>
           <div class="profile-box__header-user">
-            <div class="profile-box__header-user-photo"><img src="../../assets/img/users-photo.png" alt=""></div>
+            <div class="profile-box__header-user-photo">
+              <img src="../../assets/img/users-photo.png" alt="">
+            </div>
             <div class="profile-box__header-user-data">
               <div class="profile-box__header-user-name-info-wrapper">
                 <div class="profile-box__header-user-name">Roman Budzak</div>

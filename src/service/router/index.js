@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import UserProfile from '../../pages/profile/UserProfile'
-import General from '../../templates/profile/ProfileGeneral'
-import MyEarnings from '../../templates/profile/ProfileEarnings'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: { name : 'profile.general'}
+    redirect: { name : 'profile'}
   },
   {
     path: '/profile',

@@ -23,19 +23,21 @@
     <div class="profile-box__wrapper profile-edit">
       <div class="profile-box__header-user">
         <div class="uploader-box">
-          <form action="">
-            <div class="uploader-box__view profile-box__header-user-photo"><img src="img/users-photo.png" alt=""></div>
+          <v-form>
+            <div class="uploader-box__view profile-box__header-user-photo">
+<!--              <img src="..img/users-photo.png" alt="">-->
+            </div>
             <div class="uploader-box__file profile-box__header-user-data">
               <label>
                 <input type="file" id="uploadImg"><span class="btn btn_add">Изменить фото профиля</span>
               </label>
             </div>
-          </form>
+          </v-form>
         </div>
       </div>
       <div class="profile-box__all-info-wrapper">
         <div class="profile-box__all-info-header">Общая информация</div>
-        <form-profile-edit/>
+        <GeneralInformation/>
         <!--<div class="profile-box__all-info-conteiner">
           <div class="profile-box__all-info">
             <div class="builder-input-box">
@@ -44,7 +46,7 @@
               </div>
               <div class="builder-input-box__input-wrapper">
                 <div class="builder-input-box__input">
-                  <div class="form-group">
+                  <div class="form-edit-group">
                     <input type="text" value="Roman Budzak" placeholder="">
                   </div>
                 </div>
@@ -56,7 +58,7 @@
               </div>
               <div class="builder-input-box__input-wrapper">
                 <div class="builder-input-box__input">
-                  <div class="form-group">
+                  <div class="form-edit-group">
                     <input type="email" value="roman.budzak@gmail.com" placeholder="" disabled>
                   </div>
                 </div>
@@ -67,7 +69,7 @@
                 <div class="input-box-label">Телефон</div>
               </div>
               <div class="builder-input-box__input">
-                <div class="form-group">
+                <div class="form-edit-group">
                   <input id="phone" name="phone" type="tel">
                   &lt;!&ndash;input(type="text", placeholder="+7 (123) 456-78-90")&ndash;&gt;
                 </div>
@@ -139,7 +141,7 @@
               </div>
               <div class="builder-input-box__input-wrapper">
                 <div class="builder-input-box__input">
-                  <div class="form-group pr">
+                  <div class="form-edit-group pr">
                     <input type="password" id="txtPassword">
                     <button class="password-type-toggle-icon">
                       <div class="button-icon-invisible">
@@ -216,13 +218,12 @@
 </template>
 
 <script>
-  import FormProfileEdit from "../../organisms/form/FormProfileEdit";
+  import GeneralInformation from "../../templates/profile/edit/GeneralInformation";
   export default {
     name: 'UserProfileEdit',
     components: {
-      FormProfileEdit,
-    }
-
+      GeneralInformation,
+    },
   }
 </script>
 
