@@ -1,0 +1,53 @@
+// TAB ANIMATION
+.change-tab-enter-active,
+.change-tab-leave-active {
+  transition: .3s ease;
+}
+.change-tab-enter,
+.change-tab-leave-to {
+  opacity: 0;
+  transform: translateX(10%);
+}
+.change-tab-enter-to,
+.change-tab-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+// TAB ANIMATION END
+
+// PAGE ANIMATION
+.change-page-enter-active,
+.change-page-leave-active {
+  transition: .4s ease-in-out;
+}
+.change-page-enter,
+.change-page-leave-to {
+  opacity: 0;
+  //transform: scale(.98);
+  transform: translate(10%)
+}
+.change-page-enter-to,
+.change-page-leave {
+  opacity: 1;
+  transform: translate(0)
+  //transform: scale(1);
+}
+// PAGE ANIMATION END
+
+// SHOW DROPDOWN
+.show-dropdown-enter-active,
+.show-dropdown-leave-active {
+  transition: .3s ease;
+  transform-origin: 50% 0;
+}
+.show-dropdown-enter,
+.show-dropdown-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
+}
+.show-dropdown-enter-to,
+.show-dropdown-leave {
+  opacity: 1;
+  transform: scaleY(1);
+}
+// SHOW DROPDOWN END
