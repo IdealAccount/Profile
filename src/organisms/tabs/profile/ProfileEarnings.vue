@@ -1,6 +1,5 @@
 <template>
-  <div id="block2" class="profile-tabs-block block">
-    <div class="profile-tabs-block-conteiner fdc">
+  <tab-wrapper custom-class="fdc">
       <div class="profile-tabs-block-calendar-wrapper">
         <button type="button" class="open-calendar">
           <svg class="svg-icon calendar">
@@ -61,39 +60,33 @@
         </div>
         <div class="profile-tabs-block-plan-wrapper">
           <div class="cabinet-course-box__main-info-nav">
-            <ul class="list">
-              <li>
-                <button type="button" data-id="" class="__clean-btn"><span>Подать заявку на вывод</span>
-                  <svg class="svg-icon icon-back">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-back"></use>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" data-id="" class="__clean-btn"><span>Сделать перевод</span>
-                  <svg class="svg-icon icon-back">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-back"></use>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" data-id="" class="__clean-btn"><span>Statement</span>
-                  <svg class="svg-icon icon-back">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-back"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
+            <link-list :data="linkList"/>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+  </tab-wrapper>
 </template>
 
 <script>
   export default {
-
+    data() {
+      return {
+        linkList: [
+          {
+            title: 'Подать заявку на вывод',
+            src: 'profile'
+          },
+          {
+            title: 'Сделать перевод',
+            src: 'profile'
+          },
+          {
+            title: 'Statement',
+            src: 'profile'
+          },
+        ]
+      }
+    }
   }
 </script>
 

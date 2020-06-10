@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import RadioControl from "../components/form/RadioControl";
+  import RadioControl from "../../components/form/RadioControl";
   export default {
     name: 'ControlsContainer',
     components: {

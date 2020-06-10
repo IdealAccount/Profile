@@ -15,8 +15,8 @@
 </template>
 
 <script>
-  import VInput from "../atoms/VInput";
-  import FieldWrapper from "../components/form/FieldWrapper";
+  import VInput from "../../atoms/VInput";
+  import FieldWrapper from "../../components/form/FieldWrapper";
   export default {
     name: 'TextField',
     comments: {

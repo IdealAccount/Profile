@@ -12,7 +12,6 @@ export default new Vuex.Store({
   mutations: {
     registrationUser(state, user) {
       state.users.push(user);
-      console.log(state.users)
     },
     loginUser(state) {
       state.login = true
@@ -22,6 +21,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
+
   },
   getters: {
     users: state => state.users,

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import RadioGroup from "../../molecules/RadioGroup";
+  import RadioGroup from "../../molecules/form/RadioGroup";
   export default {
     name: 'InputsGroup',
     components: {RadioGroup}

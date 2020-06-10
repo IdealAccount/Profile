@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import {mapGetters, mapMutations} from 'vuex'
+  import {mapGetters, mapMutations, mapActions} from 'vuex'
   export default {
     data() {
       return {
@@ -39,6 +39,7 @@
     },
     methods: {
       ...mapMutations(['loginUser']),
+      ...mapActions(['LoginUser']),
       login() {
         if (this.userExist(this.user)) {
           this.$router.push({name: 'profile'})

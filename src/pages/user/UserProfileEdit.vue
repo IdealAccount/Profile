@@ -25,7 +25,7 @@
         <div class="uploader-box">
           <v-form>
             <div class="uploader-box__view profile-box__header-user-photo">
-<!--              <img src="..img/users-photo.png" alt="">-->
+              <img src="../../assets/img/users-photo.png" alt="">
             </div>
             <div class="uploader-box__file profile-box__header-user-data">
               <label>

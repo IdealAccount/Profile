@@ -1,16 +1,10 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-<!--    <main-template></main-template>-->
+    <router-view/>
   </div>
 </template>
 <script>
-  // import MainTemplate from "./views/MainTemplate";
-  import {mapGetters} from 'vuex'
   export default {
-    // components: {
-    //   MainTemplate
-    // }
     created() {
       this.loadingPage()
     },
