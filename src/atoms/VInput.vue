@@ -2,7 +2,6 @@
   <input
     :type="type"
     :placeholder="placeholder"
-    :value="value"
     v-on="inputListeners"
   >
 </template>
@@ -29,14 +28,6 @@
         )
       }
     },
-    methods: {
-      onUpdate(event) {
-        console.log(event);
-      },
-      onChange(event) {
-        console.log(event);
-      }
-    }
   }
 </script>
 

@@ -6,6 +6,7 @@
           <v-input :placeholder="placeholder"
                    :value="value"
                    :type="type"
+                   v-on="$listeners"
           />
         </div>
       </div>
@@ -34,7 +35,7 @@
     },
     methods: {
       onUpdate(event) {
-        console.log('update', event.target.value);
+        console.log(event, this.$listeners);
       },
       onChange(event) {
         console.log(event);

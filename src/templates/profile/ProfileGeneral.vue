@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="profile-tabs-block-go-out">
-      <button type="button" class="third-btn">
+      <button type="button" class="third-btn" @click.prevent="logout">
         <svg class="svg-icon icon-log-out-yellow">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-log-out-yellow"></use>
         </svg>Выйти
@@ -56,7 +56,12 @@
 
 <script>
   export default {
-
+    methods: {
+      logout() {
+        this.$store.commit('logout')
+        this.$router.replace({name: 'login'})
+      }
+    }
   }
 </script>
 
