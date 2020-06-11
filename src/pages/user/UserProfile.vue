@@ -39,18 +39,17 @@
             </div>
           </div>
         </div>
-        <v-tab></v-tab>
+        <tab-profile></tab-profile>
       </div>
     </div>
   </main>
 </template>
 
 <script>
-  import VTab from "../../organisms/tabs/VTab";
   export default {
     name: 'UserProfile',
     components: {
-      VTab
+      TabProfile: () => import('@/templates/tabs/TabProfile')
     }
   }
 </script>
