@@ -32,9 +32,6 @@
       }
     },
     methods: {
-      open(src) {
-        window.open(`${src}`)
-      }
     }
 
   }

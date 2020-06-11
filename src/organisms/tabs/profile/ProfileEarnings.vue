@@ -1,33 +1,6 @@
 <template>
   <tab-wrapper custom-class="fdc">
-      <div class="profile-tabs-block-calendar-wrapper">
-        <button type="button" class="open-calendar">
-          <svg class="svg-icon calendar">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
-          </svg>
-        </button>
-        <div class="profile-tabs-block-calendar-date">Май, 2020</div>
-        <div class="profile-tabs-block-calendar">
-          <div class="profile-tabs-block-calendar-years">
-            <div class="profile-tabs-block-calendar-button">
-              <button type="button">
-                <svg class="svg-icon left">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#left"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="profile-tabs-block-calendar-year">2020</div>
-            <div class="profile-tabs-block-calendar-button">
-              <button type="button" class="future">
-                <svg class="svg-icon right">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="profile-tabs-block-calendar-months"><span>Январь</span><span>Февраль</span><span>Март</span><span>Апрель</span><span class="month-active">Май</span><span class="future">Июнь</span><span class="future">Июль</span><span class="future">Август</span><span class="future">Сентябрь</span><span class="future">Октябрь</span><span class="future">Ноябрь</span><span class="future">Декабрь</span></div>
-        </div>
-      </div>
+      <v-calendar/>
       <div class="profile-tabs-block-account-plan-wrapper">
         <div class="profile-tabs-block-account-wrapper">
           <div class="profile-tabs-block-account">
@@ -68,7 +41,12 @@
 </template>
 
 <script>
+  import VCalendar from "../../../components/VCalendar";
+
   export default {
+    components: {
+      VCalendar
+    },
     data() {
       return {
         linkList: [
