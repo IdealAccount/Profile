@@ -9,13 +9,7 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      authorization() {
-
-      }
-    }
-  }
+  export default {}
 </script>
 
 <style lang="scss">

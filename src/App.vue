@@ -1,15 +1,21 @@
 <template>
   <div id="app">
+    <v-svg></v-svg>
     <router-view/>
   </div>
 </template>
 <script>
+  import VSvg from '@/molecules/svg/VSvg'
   export default {
+    name: 'App',
+    components: {
+      VSvg
+    },
     created() {
-      this.loadingPage()
+      this.loading()
     },
     methods: {
-      loadingPage() {
+      loading() {
         if (!this.$store.getters.userAuthorized) {
           this.$router.push({name: 'login'})
         } else {

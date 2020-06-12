@@ -38,15 +38,19 @@
       ...mapGetters(['userExist']),
     },
     methods: {
-      ...mapMutations(['loginUser']),
-      ...mapActions(['LoginUser']),
+      ...mapMutations(['AUTHORISATION_USER']),
       login() {
+         /* this.axios.post("http://37.143.8.135/api", {
+            body: this.user
+          })*/
+        console.log(this.axios);
         if (this.userExist(this.user)) {
           this.$router.push({name: 'profile'})
-          this.loginUser()
+          this.AUTHORISATION_USER()
         } else {
           alert('не верные данные')
         }
+
       }
     }
   }

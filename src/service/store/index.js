@@ -7,17 +7,17 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     users: [],
-    login: false
+    authorized: false
   },
   mutations: {
     registrationUser(state, user) {
       state.users.push(user);
     },
-    loginUser(state) {
-      state.login = true
+    AUTHORISATION_USER(state) {
+      state.authorized = true
     },
     logout(state) {
-      state.login = false;
+      state.authorized = false;
     }
   },
   actions: {
@@ -26,7 +26,7 @@ export default new Vuex.Store({
   getters: {
     users: state => state.users,
     userExist: state => data => state.users.find(user => user.password === data.password),
-    userAuthorized: state => state.login
+    userAuthorized: state => state.authorized
   },
   modules: {
   },
