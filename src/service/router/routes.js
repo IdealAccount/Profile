@@ -1,5 +1,5 @@
 import auth from './auth';
-import profile from './user'
+import pages from './pages'
 
 export const routes = [
   {
@@ -7,5 +7,5 @@ export const routes = [
     redirect: {name: 'profile'}
   },
   ...auth,
-  ...profile,
+  ...pages,
 ]

@@ -22,17 +22,22 @@
       </div>
       <div class="header__nav">
         <ul class="list">
-          <li><a href="#!">
+          <li>
+            <router-link :to="{ name: 'statistic' }">
             <svg class="svg-icon icon-statistics">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-statistics"></use>
             </svg>
-            <span>Статистика</span></a></li>
+            <span>Статистика</span>
+            </router-link>
+          </li>
           <li class="active">
-            <router-link :to="{path: '/profile'}">
+            <router-link :to="{ name: 'profile' }">
             <svg class="svg-icon icon-training">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-training"></use>
             </svg>
-            <span>Обучение</span></router-link></li>
+            <span>Обучение</span>
+            </router-link>
+          </li>
           <li><a href="#!">
             <svg class="svg-icon icon-structure">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-structure"></use>

@@ -18,3 +18,4 @@ Vue.component('tab-component', () => import('../components/TabComponent'))
 Vue.component('form-profile-edit', () => import('../organisms/edit/FormProfileEdit'))
 Vue.component('general-information-footer', () => import('../organisms/edit/GeneralInformationFooter'))
 
+Vue.component('line-chart', () => import('../components/charts/LineChart'))

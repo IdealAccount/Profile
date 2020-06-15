@@ -1,0 +1,110 @@
+<template>
+  <div>
+    <line-chart :values="data"></line-chart>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        data: {
+          previous: [],
+          current: []
+        }
+      }
+    },
+    async mounted() {
+      let apiChart = JSON.parse(`{
+        "gain_loss":{
+            "current_total": 132623.7,
+            "previous_total": 130294.94,
+            "percent": 1.79,
+            "is_gain": true
+          },
+        "current": [{"date": "01.06.2020", "total": "5439.47"}, {
+            "date": "02.06.2020",
+            "total": "22597.37"
+          }, {"date": "03.06.2020", "total": "60688.26"}, {
+            "date": "04.06.2020",
+            "total": "4817.11"
+          }, {"date": "05.06.2020", "total": "4368.54"}, {
+            "date": "06.06.2020",
+            "total": "2185.44"
+          }, {"date": "07.06.2020", "total": "1461.47"}, {
+            "date": "08.06.2020",
+            "total": "2475.18"
+          }, {"date": "09.06.2020", "total": "1074.03"}, {
+            "date": "10.06.2020",
+            "total": "1810.21"
+          }, {"date": "11.06.2020", "total": "2818.20"}, {
+            "date": "12.06.2020",
+            "total": "1705.46"
+          }, {"date": "13.06.2020", "total": "1444.85"}, {
+            "date": "14.06.2020",
+            "total": "1509.81"
+          }, {"date": "15.06.2020", "total": "871.30"}],
+        "previous": [{"date": "01.05.2020", "total": "6453.96"}, {
+            "date": "02.05.2020",
+            "total": "16702.61"
+          }, {"date": "03.05.2020", "total": "75587.55"}, {
+            "date": "04.05.2020",
+            "total": "5913.29"
+          }, {"date": "05.05.2020", "total": "3041.36"}, {
+            "date": "06.05.2020",
+            "total": "2852.45"
+          }, {"date": "07.05.2020", "total": "2987.41"}, {
+            "date": "08.05.2020",
+            "total": "3177.17"
+          }, {"date": "09.05.2020", "total": "1554.98"}, {
+            "date": "10.05.2020",
+            "total": "1910.24"
+          }, {"date": "11.05.2020", "total": "1579.94"}, {
+            "date": "12.05.2020",
+            "total": "2220.40"
+          }, {"date": "13.05.2020", "total": "1810.45"}, {
+            "date": "14.05.2020",
+            "total": "2108.60"
+          }, {"date": "15.05.2020", "total": "2394.53"}, {
+            "date": "16.05.2020",
+            "total": "2390.41"
+          }, {"date": "17.05.2020", "total": "1820.27"}, {
+            "date": "18.05.2020",
+            "total": "1453.25"
+          }, {"date": "19.05.2020", "total": "1350.08"}, {
+            "date": "20.05.2020",
+            "total": "1828.90"
+          }, {"date": "21.05.2020", "total": "3074.37"}, {
+            "date": "22.05.2020",
+            "total": "2926.05"
+          }, {"date": "23.05.2020", "total": "1489.04"}, {
+            "date": "24.05.2020",
+            "total": "1896.22"
+          }, {"date": "25.05.2020", "total": "3671.43"}, {
+            "date": "26.05.2020",
+            "total": "3375.39"
+          }, {"date": "27.05.2020", "total": "3276.37"}, {
+            "date": "28.05.2020",
+            "total": "3025.26"
+          }, {"date": "29.05.2020", "total": "5010.45"}, {
+            "date": "30.05.2020",
+            "total": "5536.41"
+          }, {"date": "31.05.2020", "total": "10838.20"}]
+      }`);
+
+      const {
+        current,
+        previous,
+        gain_loss
+      } = apiChart;
+
+
+      this.data.current = current.map(item => item.total);
+      this.data.previous = previous.map(item => item.total);
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
