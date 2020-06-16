@@ -2,12 +2,12 @@
   <div class="statistic-box">
     <div class="statistic-box__body">
       <div class="builder-tabs-wrapper">
-       <!-- <div class="builder-content-tabs">
-          <ul class="content-tabs-nav">
-            <li><a href="javascript://" onclick="openBlock(event, 'block1')" class="tabs-link tab-visible current-link">Показатели</a></li>
-            <li><a href="javascript://" onclick="openBlock(event, 'block2')" class="tabs-link">Аналитика</a></li>
-          </ul>
-        </div>-->
+        <!-- <div class="builder-content-tabs">
+           <ul class="content-tabs-nav">
+             <li><a href="javascript://" onclick="openBlock(event, 'block1')" class="tabs-link tab-visible current-link">Показатели</a></li>
+             <li><a href="javascript://" onclick="openBlock(event, 'block2')" class="tabs-link">Аналитика</a></li>
+           </ul>
+         </div>-->
         <div id="block1" class="builder-tabs-block block">
           <div class="statistics-analitics-wrapper">
             <div class="statistics-analitics-buttons-calendar">
@@ -40,7 +40,12 @@
                       </button>
                     </div>
                   </div>
-                  <div class="profile-tabs-block-calendar-months"><span>Январь</span><span>Февраль</span><span>Март</span><span>Апрель</span><span class="month-active">Май</span><span class="future">Июнь</span><span class="future">Июль</span><span class="future">Август</span><span class="future">Сентябрь</span><span class="future">Октябрь</span><span class="future">Ноябрь</span><span class="future">Декабрь</span></div>
+                  <div class="profile-tabs-block-calendar-months">
+                    <span>Январь</span><span>Февраль</span><span>Март</span><span>Апрель</span><span
+                    class="month-active">Май</span><span class="future">Июнь</span><span class="future">Июль</span><span
+                    class="future">Август</span><span class="future">Сентябрь</span><span
+                    class="future">Октябрь</span><span class="future">Ноябрь</span><span class="future">Декабрь</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,15 +97,9 @@
                     <div class="chart-info-box__body-description-step"><b class="red">152 901</b><i>45.4%</i></div>
                     <div class="chart-info-box__body-description-time"><span>381156</span><i>Пред. месяц</i></div>
                   </div>
+                  <div class="chart-info-box__body-chart"> <!--  big-chart (class) -->
                     <group-volume-chart></group-volume-chart>
-                  <!--<div class="chart-info-box__body-chart big-chart">
-                    <div class="chart-info-box__body-chart-max"><span>250</span></div>
-                    <div class="chart-info-box__body-chart-content">
-                      <div class="chart-info-box__body-chart-legend-y"><span>200</span><span>150</span><span>100</span><span>50</span><span>0</span></div>
-                      <div id="infoChart" class="info-chart"></div>
-                    </div>
-                    <div class="chart-info-box__body-chart-legend"><span>01.03</span><span>04.03</span><span>07.03</span><span>10.03</span><span>13.03</span><span>16.03</span><span>19.03</span><span>22.03</span><span>25.03</span><span>28.03</span><span>31.03</span></div>
-                  </div>-->
+                  </div>
                 </div>
                 <button class="btn mob">Зарегистрировать</button>
               </div>
@@ -119,11 +118,7 @@
                     <div class="chart-info-box__body-description-time"><span>38156</span><i>Пред. месяц</i></div>
                   </div>
                   <div class="chart-info-box__body-chart">
-                    <div class="chart-info-box__body-chart-max"><span>250</span></div>
-                    <div class="chart-info-box__body-chart-content">
-                      <div id="infoChart2" class="info-chart"></div>
-                    </div>
-                    <div class="chart-info-box__body-chart-legend"><span>01.03</span><span>04.03</span><span>07.03</span><span>10.03</span><span>13.03</span><span>16.03</span><span>19.03</span><span>22.03</span><span>25.03</span><span>28.03</span><span>31.03</span></div>
+                    <registrations-chart></registrations-chart>
                   </div>
                 </div>
                 <div class="chart-info-box__body-item">
@@ -140,11 +135,7 @@
                     <div class="chart-info-box__body-description-time"><span>38156</span><i>Пред. месяц</i></div>
                   </div>
                   <div class="chart-info-box__body-chart">
-                    <div class="chart-info-box__body-chart-max"><span>250</span></div>
-                    <div class="chart-info-box__body-chart-content">
-                      <div id="infoChart3" class="info-chart"></div>
-                    </div>
-                    <div class="chart-info-box__body-chart-legend"><span>01.03</span><span>04.03</span><span>07.03</span><span>10.03</span><span>13.03</span><span>16.03</span><span>19.03</span><span>22.03</span><span>25.03</span><span>28.03</span><span>31.03</span></div>
+                    <activations-chart></activations-chart>
                   </div>
                 </div>
               </div>
@@ -171,8 +162,10 @@
             </div>
             <div class="builder-content-tabs statistic-tabs-desk-visible">
               <ul class="statistic-tabs-nav">
-                <li><a href="javascript://" onclick="statOpenBlock(event, 'block-tab1')" class="statistic-tabs-link current-link">Общие</a></li>
-                <li><a href="javascript://" onclick="statOpenBlock(event, 'block-tab2')" class="statistic-tabs-link">Личные</a></li>
+                <li><a href="javascript://" onclick="statOpenBlock(event, 'block-tab1')"
+                       class="statistic-tabs-link current-link">Общие</a></li>
+                <li><a href="javascript://" onclick="statOpenBlock(event, 'block-tab2')" class="statistic-tabs-link">Личные</a>
+                </li>
               </ul>
             </div>
             <div id="block-tab1" class="statistics-analitics-block block-tab">
@@ -191,7 +184,8 @@
                           <div class="stastistic-item-percentage">
                             <svg class="svg-icon up-green">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-green"></use>
-                            </svg>7.4%
+                            </svg>
+                            7.4%
                           </div>
                           <div class="info-box">
                             <button type="button">
@@ -214,7 +208,8 @@
                           <div class="stastistic-item-percentage">
                             <svg class="svg-icon up-green">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-green"></use>
-                            </svg>12.4%
+                            </svg>
+                            12.4%
                           </div>
                         </div>
                         <div class="info-box">
@@ -250,7 +245,7 @@
                       <td class="col-1">Максим Бабюк</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">Вчера</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -265,7 +260,7 @@
                       <td class="col-1">Ольга Грудистова</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -280,7 +275,7 @@
                       <td class="col-1">Андрей Термишев</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова	</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -295,7 +290,7 @@
                       <td class="col-1">Мартирос Миракян</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -310,7 +305,7 @@
                       <td class="col-1">Данила Овчинников</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -325,7 +320,7 @@
                       <td class="col-1">Евгений Старков</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">2 часа назад</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -340,7 +335,7 @@
                       <td class="col-1">Роман Будзак</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">3 часа назад</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -355,7 +350,7 @@
                       <td class="col-1">Александр Помошников</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">7 часов назад</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -387,7 +382,8 @@
                           <div class="stastistic-item-percentage">
                             <svg class="svg-icon up-green">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-green"></use>
-                            </svg>11.4%
+                            </svg>
+                            11.4%
                           </div>
                           <div class="info-box">
                             <button type="button">
@@ -440,7 +436,7 @@
                       <td class="col-1">Евгений Старков</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">2 часа назад</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -455,7 +451,7 @@
                       <td class="col-1">Роман Будзак</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">3 часа назад</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -470,7 +466,7 @@
                       <td class="col-1">Александр Помошников</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">7 часов назад</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -485,7 +481,7 @@
                       <td class="col-1">Максим Бабюк</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">Вчера</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -500,7 +496,7 @@
                       <td class="col-1">Ольга Грудистова</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -515,7 +511,7 @@
                       <td class="col-1">Андрей Термишев</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова	</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -530,7 +526,7 @@
                       <td class="col-1">Мартирос Миракян</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -545,7 +541,7 @@
                       <td class="col-1">Данила Овчинников</td>
                       <td class="col-2">31.08.2019</td>
                       <td class="col-3">23.03.2020</td>
-                      <td class="col-6">Ольга Собольникова			</td>
+                      <td class="col-6">Ольга Собольникова</td>
                       <td class="col-5">
                         <div class="info-box">
                           <button type="button">
@@ -570,9 +566,14 @@
 
 <script>
   import GroupVolumeChart from "../../components/charts/GroupVolumeChart";
+  import RegistrationsChart from "../../components/charts/RegistrationsChart";
+  import ActivationsChart from "../../components/charts/ActivationsChart";
+
   export default {
     components: {
-      GroupVolumeChart
+      GroupVolumeChart,
+      RegistrationsChart,
+      ActivationsChart
     }
   }
 </script>

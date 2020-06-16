@@ -1,6 +1,6 @@
 <template>
   <div>
-    <line-chart :values="data"></line-chart>
+    <line-chart :apiData="apiData"></line-chart>
   </div>
 </template>
 
@@ -8,14 +8,11 @@
   export default {
     data() {
       return {
-        data: {
-          previous: [],
-          current: []
-        }
+        apiData: [],
       }
     },
     async mounted() {
-      let apiChart = JSON.parse(`{
+      this.apiData = JSON.parse(`{
         "gain_loss":{
             "current_total": 132623.7,
             "previous_total": 130294.94,
@@ -91,16 +88,6 @@
             "total": "5536.41"
           }, {"date": "31.05.2020", "total": "10838.20"}]
       }`);
-
-      const {
-        current,
-        previous,
-        gain_loss
-      } = apiChart;
-
-
-      this.data.current = current.map(item => item.total);
-      this.data.previous = previous.map(item => item.total);
     }
   }
 </script>

@@ -7803,6 +7803,10 @@ svg .button-plus-yellow {
 }
 .chart-info-box__body-chart {
   margin-top: 32px;
+  padding: 10px;
+  boder: solid rgba(0,0,0,.1);
+  border-top: 1px;
+  border-width-bottom: 1px;
 }
 @media (min-width: 770px) {
   .chart-info-box__body-chart.big-chart {
